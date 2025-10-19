@@ -1,5 +1,20 @@
+/**
+ * Algo-wrap — Core Algorithm
+ *
+ * Description:
+ * Implements the Merge Sort algorithm as a pure, stable sorting function.
+ * Returns a new sorted array and preserves the order of equal elements.
+ *
+ * Complexity:
+ * Time:    O(n log n)
+ * Space:   O(n)
+ *
+ * Notes:
+ * - Stable.
+ * - Used internally by the AWrapper fluent API (A([...]).mergeSort()).
+ */
+
 import { Cmp, defaultCmp } from "../../types";
-/** Stable O(n log n) merge sort (returns a NEW array). */
 
 export function mergeSort<T>(arr: T[], cmp: Cmp<T> = defaultCmp): T[] {
   const a = arr.slice();
